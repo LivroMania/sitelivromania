@@ -60,10 +60,11 @@ widgetFormAvaliar  x enctype widget y val = do
 
 formAv ::  Form Avaliacao
 formAv  = renderDivs $ Avaliacao <$>
-    areq intField "Nota" Nothing <*>
+    areq intField "Nota" Nothing <*> 
     areq (selectField us) "Usuario:" Nothing <*>
     areq (selectField lv) "Livro:" Nothing <*>
     areq textField "Avaliação: " Nothing
+
 
 us = do
     entidades <- runDB $ selectList [] [Asc UsuarioNome]
