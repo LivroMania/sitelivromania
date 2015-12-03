@@ -1,0 +1,8 @@
+<body style="background-color: #8470FF;">
+<div style="text-align:center;font-family: arial, helvetica, serif;color: #363636">
+ <h1 style="font-family: arial, helvetica, serif;color: #363636"> Faculdade de Tecnologia Rubens Lara - Trabalho Final de Haskell -  Prof. Alexandre Garcia de Oliveira
+    <h3 style="font-family: arial, helvetica, serif;color: #363636"> Site - LivroMania
+        <h4 style="font-family: arial, helvetica, serif;color: #363636"> Joao Mania -Mat. 1210020-5
+        <h4 style="font-family: arial, helvetica, serif;color: #363636"> Lucas Câmara Gomes - Mat. 1110021-1
+        <h4 style="font-family: arial, helvetica, serif;color: #363636"> Nathan Matos - Mat.
+ <input type="button" value="Voltar" onClick="history.go(-1)">

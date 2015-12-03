@@ -20,10 +20,10 @@ widgetForm :: Route Sitio -> Enctype -> Widget -> Text -> Text -> Widget
 widgetForm x enctype widget y val = do
      msg <- getMessage
      $(whamletFile "form.hamlet")
-     toWidget $(luciusFile "teste.lucius")
+     toWidget $(luciusFile "login.lucius")
      toWidgetHead
       [hamlet|
-    <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
+     <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
         |]
 
 -- widget de cadastro de usuario
@@ -31,7 +31,7 @@ widgetFormCad :: Route Sitio -> Enctype -> Widget-> Text -> Text -> Widget
 widgetFormCad  x enctype widget y val = do
     msg <- getMessage
     $(whamletFile "cadastro.hamlet")
-    toWidget $(luciusFile "teste.lucius")
+    toWidget $(luciusFile "cadastro.lucius")
     toWidgetHead
       [hamlet|
     <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
@@ -42,7 +42,7 @@ widgetFormLiv :: Route Sitio -> Enctype -> Widget-> Text -> Text -> Widget
 widgetFormLiv  x enctype widget y val = do
     msg <- getMessage
     $(whamletFile "livro.hamlet")
-    toWidget $(luciusFile "teste.lucius")
+    toWidget $(luciusFile "avaliar.lucius")
     toWidgetHead
       [hamlet|
     <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
@@ -52,7 +52,7 @@ widgetFormAvaliar :: Route Sitio -> Enctype -> Widget -> Text -> Text -> Widget
 widgetFormAvaliar  x enctype widget y val = do
     msg <- getMessage
     $(whamletFile "avaliar.hamlet")
-    toWidget $(luciusFile "teste.lucius")
+    toWidget $(luciusFile "avaliar.lucius")
     toWidgetHead
       [hamlet|
     <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
@@ -86,7 +86,7 @@ formLiv = renderDivs $ Livro  <$>
 formUsu :: Form Usuario
 formUsu = renderDivs $ Usuario <$>
     areq textField "Login:" Nothing <*>
-    areq textField "Senha:" Nothing <*>
+    areq passwordField "Senha:" Nothing <*>
     pure ""
 
 formCad :: Form Usuario
@@ -101,15 +101,16 @@ getListaDeAvR = do
     defaultLayout $ toWidgetHead
         [hamlet|
     <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
-        |] >> $(whamletFile "avaliacao.hamlet") -- >> toWidget $(luciusFile "teste.lucius")
+        |] >> $(whamletFile "avaliacao.hamlet")  >> toWidget $(luciusFile "teste.lucius")
 
 getVisAvaR :: Key Livro -> Handler Html
 getVisAvaR x = do
     liAv <- runDB $ selectList [AvaliacaoCd_Livro ==. x] []
-    defaultLayout [whamlet|
-        $forall Entity pid avaliacao<- liAv
-            <p>#{avaliacaoOpniao avaliacao}
-    |]
+    defaultLayout $ toWidgetHead
+        [hamlet|
+    <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
+        |] >> $(whamletFile "visavar.hamlet")--  >> toWidget $(luciusFile "teste.lucius")
+    
 
 getFaviconR :: Handler Html
 getFaviconR = sendFile "img/ico" "favicon.ico"
@@ -129,13 +130,13 @@ getVisualizarR x = do
     defaultLayout $ toWidgetHead
         [hamlet|
     <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
-        |] >> $(whamletFile "listalivros.hamlet") >> toWidget $(luciusFile "teste.lucius")
+        |] >> $(whamletFile "listalivros.hamlet")-- >> toWidget $(luciusFile "teste.lucius")
   
     
 getAvaliarR :: Handler Html
 getAvaliarR = do
     (wid,enc) <- generateFormPost formAv
-    defaultLayout $ widgetFormAvaliar AvaliarR enc wid "LivroMania" "Avaliar"
+    defaultLayout $ widgetFormAvaliar AvaliarR enc wid "Avalie um de nossos livros" "Avaliar"
     
 postAvaliarR :: Handler Html
 postAvaliarR = do
@@ -149,7 +150,7 @@ postAvaliarR = do
 getLivroR :: Handler Html
 getLivroR = do
     (wid,enc) <- generateFormPost formLiv
-    defaultLayout $ widgetFormLiv LivroR enc wid "LivroMania" "Cadastrar"
+    defaultLayout $ widgetFormLiv LivroR enc wid "Preencha os campos para cadastrar um novo livro" "Cadastrar"
 
 postLivroR :: Handler Html
 postLivroR = do
@@ -165,7 +166,7 @@ postLivroR = do
 getUsuarioR :: Handler Html
 getUsuarioR = do
     (wid,enc) <- generateFormPost formCad
-    defaultLayout $ widgetFormCad UsuarioR enc wid "LivroMania" "Cadastrar"
+    defaultLayout $ widgetFormCad UsuarioR enc wid "Começe ja a usar o LivroMania" "Cadastrar"
 
 --getImgR :: Handler Html
 --getImgR = defaultLayout
@@ -173,7 +174,11 @@ getUsuarioR = do
 getWelcomeR :: Handler Html
 getWelcomeR = do
      usr <- lookupSession "_ID"
-     defaultLayout $(whamletFile "inicio.hamlet")
+     defaultLayout $ toWidgetHead
+        [hamlet|
+     <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
+        |] >> $(whamletFile "inicio.hamlet")--  >> toWidget $(luciusFile "teste.lucius")
+     
      
      
      
@@ -197,7 +202,7 @@ postLoginR = do
                     setSession "_ID" (usuarioNome usr)         
                     redirect WelcomeR
                 Nothing -> do
-                    setMessage $ [shamlet| Usuário ou senha incorretos |]
+                    setMessage $ [shamlet| <br> Usuário ou senha incorretos |]
                     redirect LoginR 
         _ -> redirect LoginR
 
@@ -221,8 +226,11 @@ getByeR = do
     deleteSession "_ID"
     redirect LoginR
 
-getAdminR :: Handler Html
-getAdminR = defaultLayout [whamlet| <h1> Bem-vindo ADMIN!! |]
+getSobreR :: Handler Html
+getSobreR = do
+    defaultLayout $(whamletFile "sobre.hamlet")
+
+
 
 
 connStr = "dbname=dbj6e5o0khrri7 host=ec2-54-227-254-13.compute-1.amazonaws.com user=pxytleypkfkrfw password=INxCUYCgxZtr88fumSX2JdSzBn port=5432"

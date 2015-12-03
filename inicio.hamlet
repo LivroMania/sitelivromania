@@ -1,10 +1,16 @@
-
-
-<h1>LivroMania
-
-    <div style="background-color:#00BFFF;text-align:center">
-     <a href="/">Home
-     <a href="/listalivro"> Livros 
-     <a href="/listadeavaliacao"> Avaliações
-     <a href="/avaliar">Avaliar
-     <a href="/bye">Sair 
+<html class="no-js" lang="en">
+<head>    
+ <link href=@{FaviconR} rel="shortcut icon" sizes="32x32" type="img/ico" />
+<body style="background-color: #8470FF">
+ <h3 style="font-family: arial, helvetica, serif;color: #363636;margin-top:0px;margin-left: 21%;font-size: 40px;"> LivroMania, seu portal de avaliação de livros na internet!
+ <h3 style="font-family: arial, helvetica, serif;color: #363636;margin-top:0px;margin-left: 40%;font-size: 20px;"> Navegue pelo menu abaixo
+ <div style="background-color:#E8E8E8;text-align:center;position:absolute;top:30%;left:25%;font-family: arial, helvetica, serif;margin-top:0px;margin-left:0px;border-radius: 5px;color: #363636;font-size: 20px;width:50%;">
+     
+  <a href="/listalivro" style="margin: 0 20px;color: #363636;text-decoration:none"> Livros  
+  <a href="/livro" style="margin: 0 20px;color: #363636;text-decoration:none"> Cadastrar Livros  
+  <a href="/listadeavaliacao" style="margin: 0 20px;color: #363636;text-decoration:none"> Avaliações  
+  <a href="/avaliar" style="margin: 0 20px;color: #363636;text-decoration:none">Avaliar  
+  <input type="submit" id="cadastro" value="Sair" onclick="location. href= '/bye' " style="border-radius: 5px;">
+<footer style="margin: 0 20px;color: #363636;margin-top:42%;text-align:center;">
+  <a href="/sobre" style="margin: 0 20px;color: #363636;margin-top:80%;text-align:center;color: #363636;font-size: 20px"> Sobre 
+  <p> LivroMania - 2015

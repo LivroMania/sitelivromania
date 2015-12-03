@@ -1,7 +1,11 @@
-<h1>
-    #{y}
+<body>
+
+<div id="abc">
+     
+    <p id="cba"> #{y}
     $maybe mm <- msg
         #{mm}
     <form method=post action=@{x} enctype=#{enctype}>
         ^{widget}
         <input type="submit" value=#{val}>
+        <input type="button" value="Voltar" onClick="history.go(-1)">

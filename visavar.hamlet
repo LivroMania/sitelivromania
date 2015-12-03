@@ -1,0 +1,13 @@
+<body style="background-color: #8470FF">
+ <h1 style="text-align:center;color: #363636;font-size:35px;font-family: arial, helvetica, serif;"> Avaliações já realizadas sobre este livro:
+$forall Entity pid avaliacao<- liAv
+           <div style="background-color: #E8E8E8; width: 600px; border-radius: 3px;text-align:center;top:30%;left:25%;margin-left:34%">
+            <p style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;"> Opnião: <br>
+            <li style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;">#{avaliacaoOpniao avaliacao}
+
+
+
+
+
+
+

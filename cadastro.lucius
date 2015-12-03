@@ -1,0 +1,18 @@
+h3{
+   
+	position:absolute;
+	top:50%;
+	left:34%;
+    font-family: arial, helvetica, serif;
+    margin-top:-50px;
+	margin-left:-50px;
+    background-color: #E8E8E8;
+    border-radius: 5px;
+    width: 30%;
+    text-align:center;
+}
+
+body{
+background-color: #8470FF;
+    
+}

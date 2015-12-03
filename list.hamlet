@@ -1,3 +1,4 @@
 <h1> Livros Cadastrados:
     $forall Entity pid user <- listaU
         <p> #{usuarioNome user} <br>
+                                    <input type="button" value="Voltar" onClick="history.go(-1)">

@@ -1,9 +1,30 @@
+<body style="background-color: #8470FF">
+ <div style="text-align:center">
+    <h1 style="font-family: arial, helvetica, serif;color: #363636;font-size:35px;"> Veja todos os livros cadastrados em nosso sistema, todos estão disponíveis para avaliação!
+    <br>
+ <div style="background-color: #E8E8E8; width: 300px; border-radius: 3px;text-align:center;top:30%;left:25%;margin-left:42%">
   $forall Entity pid livro <- liU
          <div id="divlivros">
-            <p>#{livroNm_Livro livro}
-            <p>#{livroCd_ISBN livro}
-            <p>#{livroNm_Autor livro}
-            <p>#{livroDt_Ano livro}
-            <p>#{livroNm_Genero livro}
-            <p>#{livroDs_Sinopse livro}
-    |]
+            <p style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;">Livro: #{livroNm_Livro livro}
+            <p style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;"> Cod. ISBN: #{livroCd_ISBN livro}
+            <p style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;">Autor: #{livroNm_Autor livro}
+            <p style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;">Ano: #{livroDt_Ano livro}
+            <p style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;">Gênero: #{livroNm_Genero livro}
+            <p style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;">Sinopse: #{livroDs_Sinopse livro}
+   <input type="button" value="Voltar" onClick="history.go(-1)">
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+    

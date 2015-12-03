@@ -64,8 +64,8 @@ instance Yesod Sitio where
     authRoute _ = Just $ LoginR
     isAuthorized UsuarioR _ = isVisita
     isAuthorized LoginR _ = return Authorized
-    isAuthorized AdminR _ = isAdmin
     isAuthorized LivroR _ = isAdmin
+    isAuthorized FaviconR _ = return Authorized
     isAuthorized _ _ = isUser
 
 isAdmin = do
@@ -73,7 +73,7 @@ isAdmin = do
     return $ case mu of
         Nothing -> AuthenticationRequired
         Just "admin" -> Authorized
-        Just _ -> Unauthorized "Soh o admin acessa aqui!"
+        Just _ -> Unauthorized "Você por aqui? Infelizmente a pagina é restrita a administradores!"
 
 isUser = do
     mu <- lookupSession "_ID"

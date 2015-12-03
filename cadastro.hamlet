@@ -1,13 +1,16 @@
-
+<body style="background-color: #8470FF">
 <h3>
    
     #{y}
-    aaaaaaaaaaaaa
+    <br>
+    Insira seus dados para cadastrar-se no LivroMania!
     $maybe mm <- msg
         #{mm}
     <form method=post action=@{x} enctype=#{enctype}>
         ^{widget}
         <input type="submit" value=#{val}>
+               <br>
+                   <input type="button" value="Voltar" onClick="history.go(-1)">
 
 <h2> 
-    <p> aaaaaa
+   

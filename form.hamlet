@@ -1,4 +1,8 @@
-<h1>
+<body>
+ <h2 style="font-family: arial, helvetica, serif;color: #363636;margin-top:0px;margin-left: 35%;font-size: 40px;"> Bem-Vindo ao LivroMania!
+ <h2 style="font-family: arial, helvetica, serif;color: #363636;margin-top:0px;margin-left: 36%;font-size: 25px;"> Informe seus dados para acessar o site
+ <h2 style="font-family: arial, helvetica, serif;color: #363636;margin-top:0px;margin-left: 33%;font-size: 20px;"> Ainda não é cadastrado? Clique em cadastre-se e começe já
+ <h1>
    
     #{y}
     $maybe mm <- msg
@@ -6,4 +10,5 @@
     <form method=post action=@{x} enctype=#{enctype}>
         ^{widget}
         <input type="submit" value=#{val}>
-    <a href="/user">Cadastre-se
+    <input type="submit" id="cadastro" value="Cadastre-se" onclick="location. href= '/user' "> 
+           <br>

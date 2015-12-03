@@ -1,4 +1,18 @@
-<h1> Livros disponiveis para avaliacao:
+<body style="background-color: #8470FF">
+<div style="text-align:center">
+    <h1 style="font-family: arial, helvetica, serif;color: #363636;font-size:20px;"> Clique sobre o livro e veja as avaliações já realizadas
     <br>
+  <div style="background-color: #E8E8E8; width: 300px; border-radius: 3px;text-align:center;top:30%;left:25%;margin-left:42%">
     $forall Entity pid livroId <- ordens
-        <a href=@{VisAvaR pid}> #{livroNm_Livro livroId} <br>
+        <a style="color: #363636;font-size:20px;font-family: arial, helvetica, serif;" href=@{VisAvaR pid}> #{livroNm_Livro livroId} <br>
+   <input type="button" value="Voltar" onClick="history.go(-1)">
+
+
+
+
+
+
+
+
+
+ 

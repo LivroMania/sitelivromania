@@ -1,0 +1,28 @@
+
+
+body{
+background-color: #8470FF;
+    
+    
+}
+
+#abc{
+    background-color: #E8E8E8;
+    width: 27%;
+    border-radius: 10px;
+    text-align:center;
+    margin-left:38%;
+    margin-top:20%
+}
+
+label{
+    font-family: arial, helvetica, serif;
+    color: #363636;
+    font-size:20px;
+}
+
+#cba{
+    font-family: arial, helvetica, serif;
+    color: #363636;
+    font-size:35px;
+}

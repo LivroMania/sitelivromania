@@ -1,0 +1,11 @@
+
+<body style="background-color: #8470FF">
+<h1>LivroMania
+
+    <div style="background-color:#00BFFF;text-align:center">
+     <a href="/">Home
+     <a href="/listalivro"> Livros 
+     <a href="/livro"> Cadastrar Livros 
+     <a href="/listadeavaliacao"> Avaliações
+     <a href="/avaliar">Avaliar
+     <input type="button" value="Voltar" href="/sair">

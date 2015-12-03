@@ -1,4 +1,8 @@
-<h1> Veja todos os livros cadastrados em nosso sistema, todos estão disponíveis para avaliação!
+<body style="background-color: #8470FF">
+   <div style="text-align:center">
+    <h1 style="font-family: arial, helvetica, serif;color: #363636;font-size:35px;"> Veja todos os livros cadastrados em nosso sistema, todos estão disponíveis para avaliação!
     <br>
-    $forall Entity pid livroId <- liU
-        <a href=@{VisualizarR pid}> #{livroNm_Livro livroId} <br>
+ <div style="background-color: #E8E8E8; width: 300px; border-radius: 3px;text-align:center;top:30%;left:25%;margin-left:42%">
+  $forall Entity pid livroId <- liU
+   <a href=@{VisualizarR pid} style="font-family: arial, helvetica, serif;color: #363636;background-color: #E8E8E8;font-size:25px;"> #{livroNm_Livro livroId} <br> <br>
+<br> <input type="button" value="Voltar" onClick="history.go(-1)">
