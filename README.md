@@ -28,11 +28,11 @@
     
     Sair > Rota /bye ==> botão que permite sair do sistema, deslogando seu usuário.
 
-  * Rota >  /visualizar
+  * Rota >  /visualizar/...
 
    Rota dedicada a exibir o livro e seus detalhes, como Título, Sinopse, ISBN, Autor, etc.
    
-  * Rota >  /visualizaravaliacao
+  * Rota >  /visualizaravaliacao/...
    
    Rota dedicada a exibir a avaliação do livro selecionado, exibindo as opniões sobre cada livro.
 
