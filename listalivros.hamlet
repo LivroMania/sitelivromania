@@ -1,0 +1,9 @@
+  $forall Entity pid livro <- liU
+         <div id="divlivros">
+            <p>#{livroNm_Livro livro}
+            <p>#{livroCd_ISBN livro}
+            <p>#{livroNm_Autor livro}
+            <p>#{livroDt_Ano livro}
+            <p>#{livroNm_Genero livro}
+            <p>#{livroDs_Sinopse livro}
+    |]

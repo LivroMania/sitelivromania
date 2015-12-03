@@ -1,0 +1,4 @@
+<h1> Veja todos os livros cadastrados em nosso sistema, todos estão disponíveis para avaliação!
+    <br>
+    $forall Entity pid livroId <- liU
+        <a href=@{VisualizarR pid}> #{livroNm_Livro livroId} <br>

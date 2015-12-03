@@ -1,0 +1,4 @@
+<h1> Livros disponiveis para avaliacao:
+    <br>
+    $forall Entity pid livroId <- ordens
+        <a href=@{VisAvaR pid}> #{livroNm_Livro livroId} <br>
