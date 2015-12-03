@@ -7,14 +7,14 @@
 
 * Rotas
  
-  *  Rota > /login
+  * Rota > /login
  
-    É a rota no qual o usuário é iniciallizado, onde podemos fazer o login como administrador da pagina (Usuário Administrador: admin / Senha Administrador: admin) ou como usuário, podendo fazer cadastrar um novo usuário ao clicar em Cadastrar-se ou até mesmo utilizar um dos ja cadastrados usuários (Usúario: 123 / Senha: 123).
+    É a rota no qual o usuário é iniciallizado, onde podemos fazer o login como administrador da pagina (Usuário Administrador: admin /     Senha Administrador: admin) ou como usuário, podendo fazer cadastrar um novo usuário ao clicar em Cadastrar-se ou até mesmo            utilizar um dos ja cadastrados usuários (Usúario: 123 / Senha: 123).
     
 
   * Rota /
 
-   Ao logar-se, você será direcionado a pagina principal da ferramenta, onde encontra-se o menu, com as opções de : 
+    Ao logar-se, você será direcionado a pagina principal da ferramenta, onde encontra-se o menu, com as opções de : 
    
     Consultar Livros > Livros Rota /listalivro ==> consulta os livros cadastrados no sistema e selecionando o livro voce terá acesso a      seus dados, como Título, Autor, Sinópse, etc.
     
@@ -30,15 +30,15 @@
 
   * Rota >  /visualizar/...
 
-   Rota dedicada a exibir o livro e seus detalhes, como Título, Sinopse, ISBN, Autor, etc.
+    Rota dedicada a exibir o livro e seus detalhes, como Título, Sinopse, ISBN, Autor, etc.
    
   * Rota >  /visualizaravaliacao/...
    
-   Rota dedicada a exibir a avaliação do livro selecionado, exibindo as opniões sobre cada livro.
+    Rota dedicada a exibir a avaliação do livro selecionado, exibindo as opniões sobre cada livro.
 
   * Rota > /user
  
-   Rota para cadastro de novo usuário, onde deve ser inserido usuário, senha e nome.
+    Rota para cadastro de novo usuário, onde deve ser inserido usuário, senha e nome.
 
 
 
