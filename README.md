@@ -12,7 +12,7 @@
     É a rota no qual o usuário é iniciallizado, onde podemos fazer o login como administrador da pagina (Usuário Administrador: admin / Senha Administrador: admin) ou como usuário, podendo fazer cadastrar um novo usuário ao clicar em Cadastrar-se ou até mesmo utilizar um dos ja cadastrados usuários (Usúario: 123 / Senha: 123).
     
 
-  * Rota 
+  * Rota /
 
    Ao logar-se, você será direcionado a pagina principal da ferramenta, onde encontra-se o menu, com as opções de : 
    
