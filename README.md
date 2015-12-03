@@ -13,7 +13,19 @@
     
 
 * /
+
    Ao logar-se, você será direcionado a pagina principal da ferramenta, onde encontra-se o menu, com as opções de : 
-   - Consultar Livros (consulta os livros cadastrados no sistema e seus dados, como Título, Autor, Sinópse, etc.)
-   - 
+    Consultar Livros [Rota /listalivro] (consulta os livros cadastrados no sistema e selecionando o livro voce terá acesso a seus          dados, como Título, Autor, Sinópse, etc.)
+    Cadastrar Livros [Rota /livro] (opção restrita ao administrador, onde pode ser realizado o cadastramento de novos livros, evitando     assim que livros inexistentes sejam cadastrados pelos usuários do sistema)
+    Avaliações [Rota /listadeavaliacao] (onde pode ser feita a consulta de avaliações realizadas em cada livro)
+    Avaliar [Rota /avaliar] (opção na qual pode se avaliar um livro e emitir sua opnião)
+    Sobre [Rota /sobre] (rota para saber mais sobre o LivroMania, seus autores, o seu propósito)
+    Sair [Rota /bye] (botão que permite sair do sistema, deslogando seu usuário)
+
+* /visualizar/...
+
+   Rota dedicada a exibir o livro e seus detalhes, como
+
+    
+    
 
